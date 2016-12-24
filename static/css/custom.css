@@ -1,0 +1,9 @@
+#whole_page {
+	background-color: rgb(210,188,188);
+}
+
+#top_header.jumbotron {
+	background-color: #7878f9;
+	color:white;
+	padding-left:10px;
+}
