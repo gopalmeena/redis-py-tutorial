@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="../static/css/custom.css">
 </head>
 <body ng-app="redisApp">
-	<div id="whole_page">
+	<div ng-controller="RedisCtrl" class="md-padding" ng-cloak>
 		<div id="top_header">
 			<div class="jumbotron">
 				<div class="container">
@@ -16,16 +16,28 @@
 				</div>
 			</div>
 		</div>
-		<div id="main_content">
-			<div class="container">
-				<md-grid-tile>
-					<md-grid-tile-header>
-						<h3>This is a header</h3>
-					</md-grid-tile-header>
-				</md-grid-tile>
+		<div id="instructions">
+			<div class="jumbotron">
+			<h2>Instructions before using <strong><i>Commands</i></strong>:</h2>
+				<ul>
+					<li>First install redis by <code>pip install redis</code>.</li>
+					<li>Now use <code>import redis</code> in your <code>(filename).py</code> file.</li>
+					<li>Make a redis connection using <code>r = redis.StrictRedis(host='localhost',port=6379,db=0)</code> . Click <a>here</a> to check all options.</li>
+					<li> You can make a connection Pool too. </li>
+				</ul>
+			</div>
+		</div>
+		<div id="commands">
+			<div class="jumbotron">
+				<!-- <div class="container"> -->
+					<section layout="row" layout-sm="column" layout-align"center center" layout-wrap>
+						<md-button class="md-raised md-primary" ng-click="showTabDialog($event)">expire</md-button>
+					</section>
+				<!-- </div> -->
 			</div>
 		</div>
 	</div>
+
 	<!--Angular material require these libraries -->
 	<script type="text/javascript" src="../static/js/angular.min.js"></script>
 	<script type="text/javascript" src="../static/js/angular-animate.min.js"></script>
