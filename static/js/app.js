@@ -1,7 +1,7 @@
 var redisApp = angular.module('redisApp',['ngMaterial']);
 redisApp.controller('RedisCtrl',function($scope,$mdDialog){
 	//write your code here
-	$scope.showTabDialog = function(ev) {
+/*	$scope.showTabDialog = function(ev) {
 		$mdDialog.show({
 			controller: DialogController,
 			templateUrl: 'expire.html',
@@ -14,6 +14,59 @@ redisApp.controller('RedisCtrl',function($scope,$mdDialog){
 		}, function() {
 			$scope.status = 'You cancelled the dialog.';
 		});
+	};
+*/
+	$scope.showExpireDialog = function(ev){
+		$mdDialog.show({
+			controller: DialogController,
+			templateUrl: 'expire.html',
+			parent: angular.element(document.body),
+			targetEvent: ev,
+			clickOutsideToClose:true
+		})
+		.then(function(answer){
+
+		});
+
+	};
+	$scope.showSetDialog = function(ev){
+		$mdDialog.show({
+			controller: DialogController,
+			templateUrl: 'set.html',
+			parent: angular.element(document.body),
+			targetEvent: ev,
+			clickOutsideToClose:true
+		})
+		.then(function(answer){
+
+		});
+
+	};
+	$scope.showGetDialog = function(ev){
+		$mdDialog.show({
+			controller: DialogController,
+			templateUrl: 'get.html',
+			parent: angular.element(document.body),
+			targetEvent: ev,
+			clickOutsideToClose:true
+		})
+		.then(function(answer){
+
+		});
+
+	};
+	$scope.showKeysDialog = function(ev){
+		$mdDialog.show({
+			controller: DialogController,
+			templateUrl: 'keys.html',
+			parent: angular.element(document.body),
+			targetEvent: ev,
+			clickOutsideToClose:true
+		})
+		.then(function(answer){
+
+		});
+
 	};
 
 	function DialogController($scope, $mdDialog) {
