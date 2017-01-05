@@ -41,7 +41,7 @@
 							<li>Start Redis Client by command<strong><code>redis-cli</code></strong> in different termianl and for checking all keys, use command <strong><code>keys *</code></strong></li>
 							<img src="../static/img/Selection_005.png" >
 							<p> Now you can see in both terminals, output of commands give empty list. It means there is no key in redis</p>
-							<li>Now let's add a new key <strong>'a'</strong> with value <strong>5</strong> .For this (in python), we will use <strong>set()</strong> function. Syntax for doing this is <strong><code>< redis_instance >.set(< key_name >,< key_value >)</code></strong>,for example:<strong><code>r.set('a',5)</code></strong>. Use <strong><code>r.keys()</code></strong> to check whether that key has been saved in redis or not. We also can get value of that key by <strong>get()</strong> function. Syntax for this is: <strong><code>< redis_instance >.set(< key_name >)</code></strong>, in this case <strong><code>r.get('a')</code></strong></li>
+							<li>Now let's add a new key <strong>'a'</strong> with value <strong>5</strong> .For this (in python), we will use <strong>set()</strong> function. Syntax for doing this is <strong><code>< redis_instance >.set(< key_name >,< key_value >)</code></strong>,for example:<strong><code>r.set('a',5)</code></strong>. Use <strong><code>r.keys()</code></strong> to check whether that key has been saved in redis or not. We also can get value of that key by <strong>get()</strong> function. Syntax for this is: <strong><code>< redis_instance >.get(< key_name >)</code></strong>, in this case <strong><code>r.get('a')</code></strong></li>
 							<img src="../static/img/Selection_002.png" >
 						</ol>
 					</md-content>
