@@ -69,6 +69,20 @@ redisApp.controller('RedisCtrl',function($scope,$mdDialog){
 
 	};
 
+	$scope.showAppendDialog = function(ev){
+		$mdDialog.show({
+			controller: DialogController,
+			templateUrl: 'append.html',
+			parent: angular.element(document.body),
+			targetEvent: ev,
+			clickOutsideToClose:true
+		})
+		.then(function(answer){
+
+		});
+
+	};
+
 	function DialogController($scope, $mdDialog) {
 		$scope.hide = function() {
 			$mdDialog.hide();
