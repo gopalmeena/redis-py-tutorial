@@ -83,6 +83,48 @@ redisApp.controller('RedisCtrl',function($scope,$mdDialog){
 
 	};
 
+	$scope.showBgsaveDialog = function(ev){
+		$mdDialog.show({
+			controller: DialogController,
+			templateUrl: 'bgsave.html',
+			parent: angular.element(document.body),
+			targetEvent: ev,
+			clickOutsideToClose:true
+		})
+		.then(function(answer){
+
+		});
+
+	};
+
+	$scope.showSaveDialog = function(ev){
+		$mdDialog.show({
+			controller: DialogController,
+			templateUrl: 'save.html',
+			parent: angular.element(document.body),
+			targetEvent: ev,
+			clickOutsideToClose:true
+		})
+		.then(function(answer){
+
+		});
+
+	};
+
+	$scope.showLastsaveDialog = function(ev){
+		$mdDialog.show({
+			controller: DialogController,
+			templateUrl: 'lastsave.html',
+			parent: angular.element(document.body),
+			targetEvent: ev,
+			clickOutsideToClose:true
+		})
+		.then(function(answer){
+
+		});
+
+	};
+
 	function DialogController($scope, $mdDialog) {
 		$scope.hide = function() {
 			$mdDialog.hide();
